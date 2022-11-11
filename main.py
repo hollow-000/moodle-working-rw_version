@@ -239,10 +239,10 @@ def onmessage(update,bot:ObigramClient):
     try:
         thread = bot.this_thread
         username = update.message.sender.username
-        tl_admin_user = os.environ.get('tl_admin_user')
+        #tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        #tl_admin_user = 'Chris_bel14'
+        tl_admin_user = 'g101_101'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -815,10 +815,10 @@ def convert2calendar(update,bot:ObigramClient):
     pass
 
 def main():
-    bot_token = os.environ.get('bot_token')
+    #bot_token = os.environ.get('bot_token')
     print('init bot.')
     #set in debug
-    #bot_token = '5559178136:AAF2BjUGx93RJBdpL06xnHK_Me6kpX1SCfk'
+    bot_token = '5405198494:AAH1yRVeks-GI77lwZOf8hrdQAZdPRRSpVk'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.onCallbackData('/cancel ',cancel_task)
